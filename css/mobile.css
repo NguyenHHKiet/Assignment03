@@ -45,14 +45,8 @@
         flex-direction: column;
     }
 
-    .certificate-content-card:nth-child(n+2)::before {
-        content: '';
-        background-color: #d6c08d;
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        top: -43px;
-        left: 0;
+    .certificate-content-card:nth-child(even) {
+        padding-top: 48px;
     }
 
     .project-content {
