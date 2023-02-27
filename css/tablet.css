@@ -1,0 +1,14 @@
+@media (max-width: 985px) and (min-width: 520px) {
+    section>.container {
+        padding: 0 20px;
+        width: 100%;
+    }
+
+    .fullname {
+        display: none;
+    }
+
+    #job-info .container {
+        grid-template-columns: 1fr 1fr;
+    }
+}

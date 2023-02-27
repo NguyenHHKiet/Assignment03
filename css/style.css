@@ -1,0 +1,378 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+.bg-grey {
+    background: #f7f7f7;
+}
+
+section>.container {
+    width: 1170px;
+    margin: auto;
+    display: block;
+
+    padding: 0 48px;
+}
+
+p {
+    font-size: 14px;
+    color: gray;
+    margin: 0;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* BANNER */
+#banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/banner.jpg);
+    min-height: 520px;
+    width: 100%;
+    position: relative;
+    background-position: center;
+}
+
+.centered {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* NAVBAR */
+
+#nav-bar {
+    text-align: center;
+}
+
+#nav-bar .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#nav-bar .fullname {
+    padding: 0 64px;
+    width: 200px;
+    position: relative;
+}
+
+#nav-bar .fullname::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ddd;
+}
+
+#nav-bar .fullname img {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+#personal-info .info,
+#target p {
+    color: gray;
+}
+
+.btn:link,
+.btn:visited {
+    color: #000;
+    text-decoration: none;
+    padding: 1cqmax 32px;
+    text-transform: uppercase;
+}
+
+.btn {
+    height: auto;
+    border-collapse: collapse;
+    border: 1px solid rgb(229, 229, 229);
+    border-top: 0;
+    border-bottom: 0;
+    font-size: 14px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.nav-icon {
+    /* stroke: transparent; */
+    fill: rgb(88, 174, 255);
+    width: 20px;
+    height: 20px;
+}
+
+.container>a.btn:nth-child(3n+2) {
+    border-left: 0;
+}
+
+/* ABOUT */
+
+#about .container {
+    max-width: max-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+    padding: 70px 50px;
+    padding-bottom: 35px;
+    width: auto;
+    background: linear-gradient(to right,
+            #f7f7f7 0%,
+            #f7f7f7 50%,
+            rgb(221, 221, 221) 50%,
+            rgb(221, 221, 221) 100%);
+}
+
+.section-title {
+    padding: 48px 0;
+}
+
+#personal-info .info span {
+    color: black;
+}
+
+.personal-info-icon svg {
+    margin-top: 35px;
+    margin-right: 12px;
+}
+
+/* job-info */
+
+#job-info .container .job-info-card {
+    margin: 30px 0;
+}
+
+#job-info .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.job-info-icon {
+    width: 64px;
+    height: 64px;
+    color: gainsboro;
+    padding-right: 12px;
+}
+
+.list-hobbies-icon {
+    width: 32px;
+    height: 32px;
+    color: rgb(88, 174, 255);
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+#job-info .container .job-info-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+}
+
+#job-info .container .job-info-card {
+    border: 1px solid gainsboro;
+    padding: 32px;
+    padding-bottom: 64px;
+}
+
+.job-info-content>ul {
+    padding-left: 24px;
+}
+
+.job-info-content .title-content {
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+.job-info-content .title-content>p {
+    font-style: italic;
+}
+
+.job-info-content li {
+    position: relative;
+}
+
+.job-info-content li::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: cornflowerblue;
+    border-radius: 50%;
+    left: -24px;
+    top: 4px;
+}
+
+.list-hobbies {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-hobbies>div {
+    text-align: center;
+}
+
+.title-content .level-info {
+    display: flex;
+    position: relative;
+    gap: 70px;
+    margin: 16px 0;
+}
+
+.title-content .level-info .blue::before {
+    content: '';
+    width: 60px;
+    height: 4px;
+    position: absolute;
+    border-radius: 12px;
+    background-color: cornflowerblue;
+}
+
+.title-content .level-info .gray::before {
+    content: '';
+    width: 60px;
+    height: 4px;
+    position: absolute;
+    border-radius: 12px;
+    background-color: darkgrey;
+}
+
+/* certificate */
+
+#certificate .container {
+    padding-bottom: 48px;
+    width: 100%;
+}
+
+.certificate-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 86px;
+    column-gap: 32px;
+    width: inherit;
+}
+
+.certificate-content .certificate-content-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    position: relative;
+    width: inherit;
+}
+
+.certificate-detail>h4 {
+    opacity: 0.7;
+}
+
+.certificate-content-card:nth-child(2n)::before {
+    content: '';
+    background-color: #d6c08d;
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    left: -16px;
+}
+
+.certificate-content-card:nth-child(2n+3)::before {
+    content: '';
+    background-color: #d6c08d;
+    position: absolute;
+    width: inherit;
+    height: 2px;
+    top: -43px;
+}
+
+/* project */
+.project-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 32px;
+    margin-bottom: 48px;
+}
+
+.project-content-card {
+    align-items: stretch;
+}
+
+.project-subtitle,
+.project-content-detail>h4 {
+    display: flex;
+    justify-content: flex-start;
+    gap: 28px;
+    padding: 8px 20px;
+    border: 1px solid #ddd;
+}
+
+table {
+    border-spacing: 0;
+}
+
+table tr {
+    border: 1px solid #ddd;
+    display: flex;
+    padding: 8px;
+}
+
+table tr td:nth-child(odd) {
+    width: 30%;
+}
+
+table tr td:nth-child(even) {
+    width: 70%;
+}
+
+/* foot */
+#footer .container ul {
+    display: flex;
+    justify-content: center;
+    padding: 32px 0;
+    gap: 32px;
+}
+
+#footer .container ul li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.foot-icon {
+    width: 32px;
+    height: 32px;
+    fill: rgb(88, 174, 255);
+    border-radius: 50%;
+}
